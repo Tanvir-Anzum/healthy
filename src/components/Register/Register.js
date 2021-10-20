@@ -14,7 +14,7 @@ const Register = () => {
  return (
    <div>
      <div>
-       <h2>register : create account</h2>
+       <h2 className="text-primary mt-5 mb-5">Register : Create Account</h2>
        <form onSubmit={handleRegister}>
          <div className='container-fluid'>
            <div className='row mb-3 '>
@@ -34,32 +34,49 @@ const Register = () => {
                />
              </div>
            </div>
+         <br />
+<div className='row mb-3 '>
+             <label htmlFor='inputEmail3' class='col-sm-2 col-form-label'>
+               Email
+             </label>
+             
+
+             <div class='col-sm-8'>
+               <input
+                 type='email'
+                 onBlur={handleEmailChange}
+                 className='form-control'
+                 id='inputEmail3'
+                 placeholder='your email'
+                 required
+               />
+             </div>
+           </div>
          </div>
          <br />
 
-         <div className='col-sm-4 mx-auto '>
-           <input
-             onBlur={handleEmailChange}
-             type='email'
-             className='form-control'
-             id='inputEmail3'
-             placeholder='your email'
-             required
-           />
-         </div>
+         
+<div className='row mb-3 '>
+             <label htmlFor='inputEmail3' class='col-sm-2 col-form-label'>
+               Password
+             </label>
+             
+
+             <div class='col-sm-8'>
+               <input
+                 type='password'
+                 onBlur={handlePasswordChange}
+                 className='form-control'
+                 id='inputEmail3'
+                 placeholder='your password'
+                 required
+               />
+             </div>
+           </div>
+      
          <br />
 
-         <div className='col-sm-4 mx-auto '>
-           <input
-             onBlur={handlePasswordChange}
-             type='password'
-             className='form-control'
-             id='inputEmail3'
-             placeholder='your password'
-             required
-           />
-         </div>
-
+         
          <button type='submit' className='btn btn-primary mt-3'>
            Register
          </button>

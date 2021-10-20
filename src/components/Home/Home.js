@@ -55,9 +55,11 @@ const Home = () => {
            </p>
          </div>
        </div>
+       <h3 className="mt-3 mb-3">Our Specialities</h3>
+       <p className="d-flex justify-content-center mb-5">We have the following departments which are specialized in the corresponding fields</p>
        <div className='row'>
-         {services.slice(0, 6).map((service) => (
-           <div className='col-sm-4 mb-3'>
+         {services.slice(0, 4).map((service) => (
+           <div className='col-sm-6 mb-3'>
              <TakingHome service={service}></TakingHome>
            </div>
          ))}

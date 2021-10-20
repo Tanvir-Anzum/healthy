@@ -14,7 +14,7 @@ const Services = () => {
  return (
    <div className="mt-5">
      <div className='row'>
-       {services.slice(6, 10).map((service) => (
+       {services.slice(4, 10).map((service) => (
          <div className='col-sm-4 mb-3'>
            <TakingServices service={service}></TakingServices>
          </div>

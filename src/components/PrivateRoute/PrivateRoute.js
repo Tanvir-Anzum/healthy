@@ -1,13 +1,27 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
+import React from 'react'
+import useAuth from '../../hooks/useAuth'
+import { Route, Redirect } from 'react-router-dom'
 
+const PrivateRoute = ({ children, ...rest }) => {
+  const { user, loading } = useAuth()
+  if (loading) return 'loading'
+  return (
+    <Route
+      {...rest}
+      render={({ location }) =>
+        user.email ? (
+          children
+        ) : (
+          <Redirect
+            to={{
+              pathname: '/login',
+              state: { from: location },
+            }}
+          ></Redirect>
+        )
+      }
+    ></Route>
+  )
+}
 
-const PrivateRoute = ({children, ...rest}) => {
- return (
-  <div>
-   <Route></Route>
-  </div>
- );
-};
-
-export default PrivateRoute;
+export default PrivateRoute

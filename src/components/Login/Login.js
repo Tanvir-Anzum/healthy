@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useHistory } from 'react-router-dom'
 import useAuth from '../../hooks/useAuth';
 import useFirebase from '../../hooks/useFirebase';
 import "./Login.css"
@@ -16,6 +16,15 @@ const Login = () => {
    handlePasswordChange,
    handleLogin
  } = useAuth()
+ const location = useLocation()
+ const history = useHistory()
+ const redirect_uri = location.state?.from || '/home'
+
+ const handleGoogleLogin = () => {
+   signInUsingGoogle().then(result => {
+        history.push(redirect_uri)
+   })
+ }
  return (
    <div>
      <h2 className='mb-3 mt-5 text-primary'>please login</h2>
@@ -70,7 +79,7 @@ const Login = () => {
        </p>
      </form>
 
-     <button className='btn btn-primary' onClick={signInUsingGoogle}>
+     <button className='btn btn-primary' onClick={handleGoogleLogin}>
        Google Sign In
      </button>
    </div>
