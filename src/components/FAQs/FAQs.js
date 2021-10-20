@@ -110,7 +110,7 @@ const FAQs = () => {
         
        </div>
        <div className='col col-md-5'>
-        <img className="w-100" src={doctorFive} alt="" />
+        <img className="w-75" src={doctorFive} alt="" />
        </div>
        </div>
      
