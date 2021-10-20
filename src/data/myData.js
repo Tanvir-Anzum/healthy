@@ -50,7 +50,7 @@ const myData = [
   {
     id: 9,
     title: 'Radiology and Imaging',
-    img: 'https://image.freepik.com/free-photo/doctor-explaining-brain-injury-senior-woman-tablet-pc-hospital-examination-room_482257-8461.jpg',
+    img: 'https://image.freepik.com/free-photo/elderly-woman-doctor-appointment-modern-private-clinic-while-she-sitts-hospital-bed-physician-is-listening-her-heart-beat-health-care-medicine-treatment-specialist-consultation_482257-4267.jpg',
     text: ' This is the main department and administrative hub of the department. The Centre offers general radiography and a range of specialised radiological procedures example mammography and ultrasound for outpatients.',
   },
 ]

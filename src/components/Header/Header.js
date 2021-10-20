@@ -1,13 +1,14 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import { Link } from 'react-router-dom'
+import useAuth from '../../hooks/useAuth';
 import useFirebase from '../../hooks/useFirebase';
 import "./Header.css"
 const Header = () => {
-  const { user, logOut } = useFirebase()
+  const { user, logOut } = useAuth()
  return (
    <div>
-      {/* <nav>
+     {/* <nav>
        <NavLink to='/home'>Home</NavLink>
        <NavLink to='/register'>Register</NavLink>
        <NavLink to='/login'>Login</NavLink>
@@ -17,7 +18,6 @@ const Header = () => {
          <NavLink to='/login'>Login</NavLink>
        } */}
      <nav className='navbar navbar-expand-lg navbar-light navbar-custom'>
-       
        <button
          class='navbar-toggler'
          type='button'
@@ -36,10 +36,25 @@ const Header = () => {
                Home
              </Link>
            </li>
+           <li className='nav-item'>
+             <Link to='/aboutUs' className='nav-link' aria-current='page'>
+               About Us
+             </Link>
+           </li>
+           <li className='nav-item'>
+             <Link to='/services' className='nav-link'>
+               Services
+             </Link>
+           </li>
 
            <li className='nav-item'>
              <Link to='/register' className='nav-link'>
                Register
+             </Link>
+           </li>
+           <li className='nav-item'>
+             <Link to='/faqs' className='nav-link'>
+               FAQs
              </Link>
            </li>
            <li className='nav-item'>
@@ -50,7 +65,11 @@ const Header = () => {
                  Login
                </Link>
              )}
-           </li> 
+           </li>
+           {user.email && (
+            
+             <span style={{ color: 'white' }}>{user.displayName} </span>
+           )}
          </ul>
          <form className='d-flex'>
            <input
@@ -65,6 +84,7 @@ const Header = () => {
          </form>
        </div>
      </nav>
+     
    </div>
  )
 };

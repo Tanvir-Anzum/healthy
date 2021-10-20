@@ -1,12 +1,10 @@
 .full{
  width: 100%;
 }
-.care{
- height: 80%;
-}
+
 .background{
  background-color: rgba(144, 238, 194, 0.3);
- height: 600px;
+ height: 360px;
 }
 .box{
  width: 300px;

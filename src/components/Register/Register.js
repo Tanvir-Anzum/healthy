@@ -8,6 +8,7 @@ const Register = () => {
    registerNewUser,
    handleEmailChange,
    handlePasswordChange,
+   handleNameChange, 
    verifyEmail
  } = useFirebase()
  return (
@@ -15,6 +16,27 @@ const Register = () => {
      <div>
        <h2>register : create account</h2>
        <form onSubmit={handleRegister}>
+         <div className='container-fluid'>
+           <div className='row mb-3 '>
+             <label htmlFor='inputEmail3' class='col-sm-2 col-form-label'>
+               Name
+             </label>
+             {/* <div className='col-sm-4 mx-auto '> */}
+
+             <div class='col-sm-8'>
+               <input
+                 type='text'
+                 onBlur={handleNameChange}
+                 className='form-control'
+                 id='inputEmail3'
+                 placeholder='your name'
+                 required
+               />
+             </div>
+           </div>
+         </div>
+         <br />
+
          <div className='col-sm-4 mx-auto '>
            <input
              onBlur={handleEmailChange}

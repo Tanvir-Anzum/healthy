@@ -17,12 +17,12 @@ const Home = () => {
        <div className='col-sm-12 col-md-6'>
          <h1>Welcome to our hospital</h1>
          <h5>
-           Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-           Reprehenderit, error dolor accusamus dignissimos doloribus odio!
+           We are providing high quality service with low cost.We are commired to ensure you best service.
          </h5>
+         <button className="btn btn-primary">Learn More</button>
        </div>
        <div className='col-sm-12 col-md-6'>
-         <img className='img-fluid care' src={banner} alt='' />
+         <img className='img-fluid' src={banner} alt='' />
        </div>
      </div>
      <div className='mt-5'>
